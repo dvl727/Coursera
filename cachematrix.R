@@ -1,11 +1,15 @@
-
+### The makeCacheMatrix function takes an input matrix and solves
+### its inverse. 
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
   set<-function(y){
   x<<-y
   m<<-NULL
 }
+## Get returns x
 get<-function() x
+
+
 setmatrix<-function(solve) m<<- solve
 getmatrix<-function() m
 list(set=set, get=get,
@@ -13,6 +17,9 @@ list(set=set, get=get,
    getmatrix=getmatrix)
 }
 
+#### CacheSolved function computes the inverse of a provided matrix, x.
+### the function checks if 'm' is already computed, it returns it from 
+### Cache. Otherwise, it recomputes the inverse and sets the value to m
 cacheSolve <- function(x=matrix(), ...) {
     m<-x$getmatrix()
     if(!is.null(m)){
