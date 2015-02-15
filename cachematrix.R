@@ -1,5 +1,5 @@
 ### The makeCacheMatrix function takes an input matrix and solves
-### its inverse. 
+### its inverse. It also sets m to null to invalidate the cache.
 makeCacheMatrix <- function(x = matrix()) {
   m<-NULL
   set<-function(y){
