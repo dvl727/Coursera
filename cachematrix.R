@@ -7,12 +7,12 @@ makeCacheMatrix <- function(x = matrix()) {
   m<<-NULL
 }
 ## Get returns x
-get<-function() x
+get<-function() x             "Get returns current matrix"
 
 
-setmatrix<-function(solve) m<<- solve
-getmatrix<-function() m
-list(set=set, get=get,
+setmatrix<-function(solve) m<<- solve    "Caclulates Matrix Inverse"
+getmatrix<-function() m                 "Retrieves matrix inverse"
+list(set=set, get=get,                  "Creates list that is returned"
    setmatrix=setmatrix,
    getmatrix=getmatrix)
 }
