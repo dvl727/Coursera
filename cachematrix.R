@@ -1,9 +1,9 @@
 ### The makeCacheMatrix function takes an input matrix and solves
 ### its inverse. It also sets m to null to invalidate the cache.
 makeCacheMatrix <- function(x = matrix()) {
-  m<-NULL
-  set<-function(y){
-  x<<-y
+  m<-NULL                    "Invalidates cache"
+  set<-function(y){          "Set function resets x with new matrix"
+  x<<-y                      
   m<<-NULL
 }
 ## Get returns x
